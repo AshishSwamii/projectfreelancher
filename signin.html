@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#fi80 ;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-weight: 400;
+        }
+        #signin{
+            height: 280px;
+            width : 200px;
+           padding-top: 5px;
+            padding-left: 22px;
+            border-radius: 3px;
+            background-color: #e8e4e4;
+            box-shadow: 2px 2px 20px black;
+        }
+        #login{ 
+            /* display  :  none ; */
+            margin-left: 10px;
+            height: 280px;
+            width : 200px;
+           padding-top: 5px;
+            padding-left: 22px;
+            border-radius: 3px;
+            background-color: #e8e4e4;
+            box-shadow: 2px 2px 20px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="signin">
+    <h1>Registration</h1>
+    <form>
+     Username
+     <br>
+     <input type="text" name="userName" id="username">
+     <br>
+     Email
+     <br>
+     <input type="email" name="UserEmail" id="email">
+     <br>
+     Password
+     <br>
+     <input type="password" name="userPassword" id="Password">
+     <br>
+     Confirm-Password
+     <br>
+     <input type="password" name="userConfirmPassword" id="Confirm-Password" >
+     <br>
+     <input type="submit"  value="sign in " style="margin-top: 10px; padding-left: 51px;padding-right: 69px; background-color: #4540a1;" onclick="clickk()">
+    </form>
+</div>
+<div id="login">
+    <h1 style="padding-left :40px ;">Login</h1>
+    <form>
+        Email 
+        <br>
+        <input type="email" name="usermail" id="loginmail">
+        <br>
+        Password
+        <br>
+        <input type="password" id="loginpassword" >
+        <br>
+        <input type="submit" value="login" style="margin-top: 90px; padding-left: 51px;padding-right : 89px; background-color: #4540a1;"  onclick="login()" >
+    </form>
+</div>
+<script>
+    
+    function clickk(){
+        
+        let  message = document.getElementById("Password").value
+        let  password = document.getElementById("Confirm-Password").value
+        
+        if(message.length != 0 && message.length == 8 ){
+
+                  if(message===password){
+             console("you are sucessfully sign in ")
+              }
+
+         else{
+             console("please write password and confirm password same")
+          }
+ }
+ 
+ else{
+    console("write valid password ")
+ }
+    }
+
+
+</script>
+</body>
+</html>
